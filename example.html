@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zoomy Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .zoomy {
+            width: 420px;
+            height:auto;
+            overflow: hidden;
+        }
+
+        .zoomy img {
+            width: 100%;
+            height: auto;
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <figure class="zoomy">
+        <img src="https://images.pexels.com/photos/93689/pexels-photo-93689.jpeg" width="840">
+    </figure>
+    <script src="zoomy.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () { 
+            initZoomy({});
+        });
+    </script>
+</body>
+
+</html>
