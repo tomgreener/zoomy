@@ -1,6 +1,8 @@
 # Zoomy
 Lightweight VanillaJS plugin for zooming images on hover. Super simple to use, easy to customise and only 1kb minified.
 
+[Demo](https://codepen.io/tomgreener/pen/PKBbPj)
+
 ### Installation
 Save `zoomy.min.js` locally and reference it in your HTML file, ideally at the end of the body.
 
