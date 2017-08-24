@@ -40,8 +40,8 @@
                             // Calculate cursor position within image container and apply image transform
                             x = e.clientX - bounds.left;
                             y = e.clientY - bounds.top;
-                            zoomX = -Math.round((x/width - 0.5)*(width*zZoom/4));
-                            zoomY = -Math.round((y/height - 0.5)*(height*zZoom/4));
+                            zoomX = -Math.round((x/width - 0.5)*width*(zZoom-1)/zZoom);
+                            zoomY = -Math.round((y/height - 0.5)*height*(zZoom-1)/zZoom);
                             el.style.transform = "scale(" + zZoom + ")";
                             if (zDirection == "both" || zDirection == "horizontal") { el.style.transform += "translateX(" + zoomX + "px)"; }
                             if (zDirection == "both" || zDirection == "vertical") { el.style.transform += "translateY(" + zoomY + "px)"; }
