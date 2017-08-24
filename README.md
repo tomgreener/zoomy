@@ -60,6 +60,7 @@ The axis on which the user can pan the zoomed image (default: 'both' - can also 
 Whether the user sees a `'crosshair'` cursor when panning the zoomed image (default: false).
 
 
+An example of a more customised setup:
 
 ```html
 <head>
