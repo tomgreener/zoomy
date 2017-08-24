@@ -41,6 +41,7 @@ Then you just need to initiate the plugin by calling `initZoomy();`, passing the
 
 Zoomy has several custom options you can specify via an object when you call `initZoomy();`.
 
+
 **zoomFactor**
 
 The scale factor of the zoomed image (default: 2).
@@ -56,6 +57,7 @@ The axis on which the user can pan the zoomed image (default: 'both' - can also 
 **cursor**
 
 Whether the user sees a `'crosshair'` cursor when panning the zoomed image (default: false).
+
 
 ```html
 <head>
