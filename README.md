@@ -5,7 +5,7 @@ Lightweight VanillaJS plugin for zooming images on hover. Super simple to use, e
 Save `zoomy.min.js` locally and reference it in your HTML file, ideally at the end of the body.
 
 ### Usage
-The only requirement when using zoomy is that you wrap zoomable images in a parent container with the class `zoomy`, or a custom class if you have specified one when during initation (see options below). The parent container should have `overflow: hidden`, and the image should have `width:100%; height:auto`. Using the HTML5 `<figure>` element as a parent container is a good semantic choice.
+The only requirement when using zoomy is that you wrap zoomable images in a parent container with the class `zoomy`, or a custom class if you have specified one during initation (see options below). The parent container should have `overflow: hidden`, and the image should have `width:100%; height:auto`. Using the HTML5 `<figure>` element as a parent container is a good semantic choice.
 
 Then you just need to initiate the plugin by calling `initZoomy();`, passing the function either an empty object (`{}`) or an object containing custom options. Ideally, Zoomy should be initiated once the DOM is loaded. An example setup is as follows:
 
@@ -42,15 +42,19 @@ Then you just need to initiate the plugin by calling `initZoomy();`, passing the
 Zoomy has several custom options you can specify via an object when you call `initZoomy();`.
 
 **zoomFactor**
+
 The scale factor of the zoomed image (default: 2).
 
 **class**
+
 The parent container class that Zoomy will look for (default: 'zoomy').
 
 **direction**
+
 The axis on which the user can pan the zoomed image (default: 'both' - can also be 'horizontal' or 'vertical').
 
 **cursor**
+
 Whether the user sees a `'crosshair'` cursor when panning the zoomed image (default: false).
 
 ```html
