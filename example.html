@@ -5,27 +5,56 @@
     <title>Zoomy Example</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        .zoomy {
-            width: 420px;
+    <style>   
+        figure {
+            margin:0;            
             overflow: hidden;
-        }
-
-        .zoomy img {
-            width: 100%;
-            height: auto;
+        }     
+        img {
+            width:100%;
+            height:auto;
             backface-visibility: hidden;
+        }        
+        .gallery {
+            max-width: 420px;
+            width:100%;
+            display:flex;
+            justify-content:space-between;
+            flex-wrap:wrap;
+        }
+        .gallery::after {
+            content:'';
+            width:31.2%;
+        }
+        .gallery figure {
+            flex-basis:31.2%;
+        }
+        .gallery figure:first-of-type {
+            flex-basis:100%;
         }
     </style>
 </head>
 
 <body>
-    <figure class="zoomy">
-        <img src="https://images.pexels.com/photos/93689/pexels-photo-93689.jpeg">
-    </figure>
+    <section class="gallery">
+        <figure class="zoomy">
+            <img src="https://images.pexels.com/photos/93689/pexels-photo-93689.jpeg">
+        </figure>
+        <figure>
+            <img src="http://cdn.skim.gs/image/upload/v1458146503/Mike%20C/994845/uncoveredpoop_wikimedia.jpg">
+        </figure>
+        <figure>
+            <img src="https://img.gadgethacks.com/img/70/34/63541893340122/0/prank-your-friends-with-random-cat-facts-text-messages.1280x600.jpg">
+        </figure>
+        <figure>
+            <img src="https://images.pexels.com/photos/93689/pexels-photo-93689.jpeg">
+        </figure>
+    </section>    
+    <script src="gallery.js"></script>
     <script src="zoomy.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () { 
+        document.addEventListener('DOMContentLoaded', function () {  
+            initGallery();
             initZoomy({});
         });
     </script>
